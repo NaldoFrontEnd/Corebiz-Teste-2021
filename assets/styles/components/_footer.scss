@@ -8,9 +8,16 @@ Footer
 
     .container{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 25px 40px;
+        
+        @include bkp('mobile'){
+            flex-direction: column;
+        }
+        
+        @include bkp('desktop'){
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     &__localizacao{
@@ -40,6 +47,11 @@ Footer
     }
 
     &__contatos{
+
+        @include bkp('mobile'){
+            margin: 40px auto 30px;
+        }
+
         i{
             line-height: 17px;
             margin-right: 17px;
@@ -68,6 +80,10 @@ Footer
     &__assinaturas{
         display: flex;
         @include rem('font-size', 10.6px);
+
+        @include bkp('mobile'){
+            margin: 0 auto 60px;
+        }
 
         a{
             color: $white;

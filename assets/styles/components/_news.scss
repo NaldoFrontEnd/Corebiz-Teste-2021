@@ -5,7 +5,11 @@ Footer
 .c-news{
     background-color: #F2F2F2;
     font-family: $font-lato;
-    padding: 25px 0 35px;
+    padding: 5%;
+
+    @include bkp('desktop'){
+        padding: 25px 0 35px;
+    }
 
     .container{
         display: flex;
@@ -23,25 +27,45 @@ Footer
     input{
         border-radius: 5px;
         
-        &:not(:last-child){
-            margin-right: 8px;
+        @include bkp('desktop'){
+            &:not(:last-child){
+                margin-right: 8px;
+            }
         }
     }
 
     form{
+        @include bkp('mobile'){
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
         input{
-            width: 280px;
             height: 48px;
             background-color: $white;
             color: #585858;
             padding: 15px;
+
+            @include bkp('mobile'){
+                &:nth-child(2){
+                    margin: 20px 0 10px 0;
+                }
+            }
+            
+            @include bkp('desktop'){
+                width: 280px;
+            }
         }
         button{
-            width: 140px;
             height: 48px;
             background-color: $black;
             color: $white;
             @include rem('font-size', 14px);
+            
+            @include bkp('desktop'){
+                width: 140px;
+            }
         }
     }
 }

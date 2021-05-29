@@ -4,7 +4,11 @@ Header
 
 .c-header{
     width: 100%;
-    height: 80px;
+    height: 88px;
+
+    @include bkp('desktop'){
+        height: 80px;
+    }
 
     a{
         color: $black;
@@ -13,10 +17,34 @@ Header
     .container{
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        position: relative;
+
+        @include bkp('mobile'){
+            padding: 3% 5%;
+        }
+
+        @include bkp('desktop'){
+            align-items: center;
+        }
+    }
+
+    &__navMob{
+        @include bkp('mobile'){
+            margin-top: 5px;
+        }
+
+        @include bkp('desktop'){
+            display: none;
+        }
     }
 
     &__logo{
+        img{
+            @include bkp('mobile'){
+                width: 109px;
+                height: 25px;
+            }
+        }
         span{
             display: none;
         }
@@ -26,17 +54,34 @@ Header
         border-bottom: 1px solid #7A7A7A;
         padding-bottom: 5px;
 
+        @include bkp('mobile'){
+            width: 90%;
+            position: absolute;
+            bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
         input{
-            width: 718px;
+            @include bkp('desktop'){
+                width: 718px;
+            }
         }
     }
-
+    
     &__boxElements{
         display: flex;
 
-        > a{
+        @include bkp('mobile'){
+            margin-top: 5px;
+        }
+
+        &--miniCart,
+        &--minhaConta{
             display: flex;
-            align-items: flex-end;
+            @include bkp('desktop'){
+                align-items: flex-end;
+            }
 
             i{
                 margin-right: 6px;
@@ -44,10 +89,15 @@ Header
         }
 
         &--minhaConta{
-            span{
-                @include rem('font-size', 13px);
-                color: #7A7A7A;
-                line-height: 12px;
+            @include bkp('mobile'){
+                display: none;
+            }
+            @include bkp('desktop'){
+                span{
+                    @include rem('font-size', 13px);
+                    color: #7A7A7A;
+                    line-height: 12px;
+                }
             }
         }
 

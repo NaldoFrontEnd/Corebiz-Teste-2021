@@ -86,16 +86,15 @@
         height: auto;
       }
       
-      #wrapper{
-        @include bkp('mobile'){
-          .-desk{
-            display: none;
-          }
-        }
-        @include bkp('desktop'){
-          .-mob{
+
+      @include bkp('mobile'){
+        .desk{
           display: none;
-          }
+        }
+      }
+      @include bkp('desktop'){
+        .mob{
+        display: none;
         }
       }
       
