@@ -8,11 +8,30 @@ Footer
 
     .container{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0;
     }
 
     &__localizacao{
+        h3{
+            @include rem('font-size', 20px);
+            margin-bottom: 20px;
+
+            &:after{
+                content: '';
+                width: 44px;
+                height: 5px;
+                background-color: #fff;
+                display: block;
+                margin-top: 15px;
+            }
+        }
 
         &--infos{
+            @include rem('font-size', 13px);
+            line-height: 25px;
+
             a{
                 color: $white;
                 display: block;  
@@ -21,17 +40,43 @@ Footer
     }
 
     &__contatos{
+        i{
+            line-height: 17px;
+            margin-right: 17px;
+        }
         a{
             width: max-content;
             background-color: $white;
             color: $black;
             display: flex; 
+            border-radius: 5px;
+            padding: 10px;
+            align-items: center;
+
+            &:first-child{
+                margin-bottom: 25px;
+            }
+
+            &:last-child{
+                span{
+                    line-height: 16px;
+                }
+            }
         }
     }
 
     &__assinaturas{
+        display: flex;
+        @include rem('font-size', 10.6px);
+        
         a{
             color: $white;
+            display: flex;
+            flex-direction: column;
+
+            &:first-child{
+                margin-right: 30px;
+            }
         }
     }
 }

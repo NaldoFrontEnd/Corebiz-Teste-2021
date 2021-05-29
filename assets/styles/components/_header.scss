@@ -3,6 +3,10 @@ Header
 ========================================= */
 
 .c-header{
+    a{
+        color: $black;
+    }
+
     .container{
         display: flex;
         justify-content: space-between;
