@@ -5,6 +5,7 @@ Footer
 .c-news{
     background-color: #F2F2F2;
     font-family: $font-lato;
+    padding: 25px 0 35px;
 
     .container{
         display: flex;
@@ -15,21 +16,32 @@ Footer
     h2{
         @include rem('font-size', 22px);
         color: #333333;
+        margin-bottom: 15px;
     }
 
     button,
     input{
         border-radius: 5px;
+        
+        &:not(:last-child){
+            margin-right: 8px;
+        }
     }
 
     form{
         input{
+            width: 280px;
+            height: 48px;
             background-color: $white;
             color: #585858;
+            padding: 15px;
         }
         button{
+            width: 140px;
+            height: 48px;
             background-color: $black;
             color: $white;
+            @include rem('font-size', 14px);
         }
     }
 }
