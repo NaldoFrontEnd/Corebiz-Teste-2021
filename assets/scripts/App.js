@@ -14,7 +14,7 @@ class Main {
         this.stableValidate();
         new common();
         
-        //console.log('teste ok')
+        console.log('teste ok')
     }
 }
 

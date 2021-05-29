@@ -46,6 +46,7 @@ var newer = require('gulp-newer');
 var sourcemaps = require('gulp-sourcemaps');
 var spritesmith = require('gulp.spritesmith');
 var wait = require('gulp-wait');
+var svgmin = require('gulp-svgmin')
 
 //es6
 var browserify = require("browserify");
@@ -90,6 +91,12 @@ gulp.task('principalScripts', function() {
         .pipe(connect.reload());
 });
 
+gulp.task('svg', function () {
+  return gulp.src('assets/svgs/*.svg')
+  .pipe(svgmin())
+  .pipe(gulp.dest('build/arquivos/svgs/'))
+})
+
 gulp.task('images', function(){
   gulp.src('assets/images/**/*')
   .pipe(newer('build/arquivos/'))
@@ -119,6 +126,7 @@ gulp.task("watch", function() {
   );
   gulp.watch("assets/styles/**/*.scss", ["sass"]);
   gulp.watch("assets/images/**/*", ["images"]);
+  gulp.watch('assets/svgs/*.svg', ["svg"]);
   gulp.watch("assets/images/sprite/**/*", ["sprite"]);
 });
 
@@ -127,6 +135,7 @@ gulp.task("scripts", ["principalScripts"]);
 gulp.task("default", [
   "connect",
   "images",
+  "svg",
   "watch",
   "sass",
   "sprite",
