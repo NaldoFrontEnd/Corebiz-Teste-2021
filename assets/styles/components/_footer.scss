@@ -10,7 +10,7 @@ Footer
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 25px 0;
+        padding: 25px 40px;
     }
 
     &__localizacao{
@@ -68,7 +68,7 @@ Footer
     &__assinaturas{
         display: flex;
         @include rem('font-size', 10.6px);
-        
+
         a{
             color: $white;
             display: flex;
