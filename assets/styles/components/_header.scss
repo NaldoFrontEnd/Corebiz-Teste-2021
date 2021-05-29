@@ -1,0 +1,263 @@
+/* ======================================
+Header
+========================================= */
+
+.h-header{
+    justify-content: space-between;
+    padding: 20px 10px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &__menu{
+        &--button{
+            cursor: pointer;
+            svg{
+                color: var(--corA);
+                @include bkp('mobile'){
+                    width: 30px;
+                }
+            }
+        }
+        &--content{
+            background-color: #29637e;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1500px;
+            z-index: 30;
+            color: #fff;
+            display: none;
+
+            &.active{
+                display: block;
+            }
+
+            a{
+                color: #fff;
+            }
+
+            .boxTop{
+                align-items: center;
+                width: 100%;
+                @include rem('padding', 20px 10px);
+                @include bkp('desktop'){
+                    @include rem('padding', 30px 60px 90px);
+                }
+                &--logo{
+                    margin: 0 auto;
+                    img{
+                        @include bkp('mobile'){
+                            width: 160px;
+                        }
+                    }
+                }
+                &--menu{
+                    cursor: pointer;
+                    img{
+                        @include bkp('mobile'){
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+
+            .navigation{
+                @include bkp('mobile'){
+                    margin-left: 35px;
+                }
+                .container{
+                    max-width: 1092px;
+                    @include bkp('mobile'){
+                        flex-direction: column;
+                    }
+                    @include bkp('desktop'){
+                        justify-content: space-between;
+                    }
+                }
+                &__left{
+                    margin-bottom: 20px;
+                    nav{
+                        ul{
+                            a{
+                                font-size: 24px;
+                                font-weight: 700;
+                                font-family: $font-raleway;
+                                margin-bottom: 10px;
+                                @include bkp('desktop'){
+                                    font-size: 38px;
+                                }
+                                &:hover{
+                                    color: var(--corA);
+                                }
+                            }
+                        }
+                    }
+                    &--bottom{
+                        &.container{
+                            @include bkp('desktop'){
+                                justify-content: left;
+                            }
+                        }
+                        .box{
+                            margin-top: 20px;
+                            &:first-child{
+                                @include bkp('desktop'){
+                                    margin-right: 50px;
+                                }
+                            }
+                            a{
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 15px;
+                                background-color: #353735;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 10px;
+                                @include bkp('desktop'){
+                                    margin: 0 4.5px;
+                                }
+                                &:hover{
+                                    background-color:var(--corA);
+                                }
+                            }
+                            &__title{
+                                font-size: 18px;
+                                font-weight: 700;
+                                margin-bottom: 15px;
+                                @include bkp('desktop'){
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &__middle{
+                    nav{
+                        line-height: 30px;
+                        a{
+                            font-size: 20px;
+                            font-weight: 600;
+                            &:hover{
+                                color: var(--corA);
+                            }
+                        }
+                    }
+                }
+
+                &__right{
+                    @include bkp('desktop'){
+                        h3{
+                            align-items: center;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                            i{
+                                font-size: 21px;
+                                font-size: 1.61538rem;
+                                color: #ffff;
+                                margin-right: 10px;
+                            }
+                        }
+                        .spacing{
+                            padding-left: 30px;
+                            span{
+                                margin-bottom: 8px;
+                                display: block;
+                            }
+                        }
+                        .horario{
+                            margin-bottom: 30px;
+                        }
+                        .telefone{
+                        strong{
+                            font-size: 20px;
+                            margin-bottom: 18px;
+                        } 
+                        } 
+                        .whatsapp{
+                            span{
+                                font-size: 13px;
+                                text-transform: uppercase;
+                            }
+                            a{
+                                width: 136px;
+                                height: 42px;
+                                background-color: #13c533;
+                                border: 1px solid #16e83c;
+                                border-radius: 10px;
+                                margin: 10px 0;
+                                align-items: center;
+                                justify-content: center;
+                                i{
+                                    font-size: 22px;
+                                }
+                                span{
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    margin-left: 10px;
+                                    margin-top: 7px;
+                                }
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+    &__logo{
+        span{
+            font-size: 0;
+        }
+        img{
+            @include bkp('mobile'){
+                width: 160px;
+            }
+        }
+    }
+
+    &__right{
+        svg{
+            color: var(--corA);
+        }
+
+        &--bag{
+            svg{
+                @include bkp('mobile'){
+                    width: 25px;
+                }
+            }
+        }
+
+        &--user{
+            @include bkp('mobile'){
+                display: none;
+            }
+            @include bkp('desktop'){
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .logo-interna{
+        display: none;
+    }
+}
+
+.h-interno{
+    .h-header__right svg,
+    .h-header__menu--button svg {
+        color: #fff;
+    }
+
+    .logo-home{
+        display: none;
+    }
+
+    .logo-interna{
+        display: block;
+    }
+}

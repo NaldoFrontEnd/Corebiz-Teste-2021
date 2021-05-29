@@ -1,0 +1,222 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$logo-ebit-name: 'logo-ebit';
+$logo-ebit-x: 0px;
+$logo-ebit-y: 79px;
+$logo-ebit-offset-x: 0px;
+$logo-ebit-offset-y: -79px;
+$logo-ebit-width: 90px;
+$logo-ebit-height: 95px;
+$logo-ebit-total-width: 320px;
+$logo-ebit-total-height: 216px;
+$logo-ebit-image: 'spritesheet-01.png';
+$logo-ebit: (0px, 79px, 0px, -79px, 90px, 95px, 320px, 216px, 'spritesheet-01.png', 'logo-ebit', );
+$logo-google-name: 'logo-google';
+$logo-google-x: 226px;
+$logo-google-y: 0px;
+$logo-google-offset-x: -226px;
+$logo-google-offset-y: 0px;
+$logo-google-width: 94px;
+$logo-google-height: 34px;
+$logo-google-total-width: 320px;
+$logo-google-total-height: 216px;
+$logo-google-image: 'spritesheet-01.png';
+$logo-google: (226px, 0px, -226px, 0px, 94px, 34px, 320px, 216px, 'spritesheet-01.png', 'logo-google', );
+$logo-n1-name: 'logo-n1';
+$logo-n1-x: 144px;
+$logo-n1-y: 0px;
+$logo-n1-offset-x: -144px;
+$logo-n1-offset-y: 0px;
+$logo-n1-width: 72px;
+$logo-n1-height: 72px;
+$logo-n1-total-width: 320px;
+$logo-n1-total-height: 216px;
+$logo-n1-image: 'spritesheet-01.png';
+$logo-n1: (144px, 0px, -144px, 0px, 72px, 72px, 320px, 216px, 'spritesheet-01.png', 'logo-n1', );
+$logo-site-blindado-name: 'logo-site-blindado';
+$logo-site-blindado-x: 0px;
+$logo-site-blindado-y: 184px;
+$logo-site-blindado-offset-x: 0px;
+$logo-site-blindado-offset-y: -184px;
+$logo-site-blindado-width: 115px;
+$logo-site-blindado-height: 32px;
+$logo-site-blindado-total-width: 320px;
+$logo-site-blindado-total-height: 216px;
+$logo-site-blindado-image: 'spritesheet-01.png';
+$logo-site-blindado: (0px, 184px, 0px, -184px, 115px, 32px, 320px, 216px, 'spritesheet-01.png', 'logo-site-blindado', );
+$logo-vtex-name: 'logo-vtex';
+$logo-vtex-x: 0px;
+$logo-vtex-y: 0px;
+$logo-vtex-offset-x: 0px;
+$logo-vtex-offset-y: 0px;
+$logo-vtex-width: 134px;
+$logo-vtex-height: 69px;
+$logo-vtex-total-width: 320px;
+$logo-vtex-total-height: 216px;
+$logo-vtex-image: 'spritesheet-01.png';
+$logo-vtex: (0px, 0px, 0px, 0px, 134px, 69px, 320px, 216px, 'spritesheet-01.png', 'logo-vtex', );
+$pagamento-american-express-name: 'pagamento-americanExpress';
+$pagamento-american-express-x: 265px;
+$pagamento-american-express-y: 80px;
+$pagamento-american-express-offset-x: -265px;
+$pagamento-american-express-offset-y: -80px;
+$pagamento-american-express-width: 38px;
+$pagamento-american-express-height: 14px;
+$pagamento-american-express-total-width: 320px;
+$pagamento-american-express-total-height: 216px;
+$pagamento-american-express-image: 'spritesheet-01.png';
+$pagamento-american-express: (265px, 80px, -265px, -80px, 38px, 14px, 320px, 216px, 'spritesheet-01.png', 'pagamento-americanExpress', );
+$pagamento-boleto-name: 'pagamento-boleto';
+$pagamento-boleto-x: 226px;
+$pagamento-boleto-y: 162px;
+$pagamento-boleto-offset-x: -226px;
+$pagamento-boleto-offset-y: -162px;
+$pagamento-boleto-width: 25px;
+$pagamento-boleto-height: 17px;
+$pagamento-boleto-total-width: 320px;
+$pagamento-boleto-total-height: 216px;
+$pagamento-boleto-image: 'spritesheet-01.png';
+$pagamento-boleto: (226px, 162px, -226px, -162px, 25px, 17px, 320px, 216px, 'spritesheet-01.png', 'pagamento-boleto', );
+$pagamento-dinners-name: 'pagamento-dinners';
+$pagamento-dinners-x: 226px;
+$pagamento-dinners-y: 80px;
+$pagamento-dinners-offset-x: -226px;
+$pagamento-dinners-offset-y: -80px;
+$pagamento-dinners-width: 29px;
+$pagamento-dinners-height: 23px;
+$pagamento-dinners-total-width: 320px;
+$pagamento-dinners-total-height: 216px;
+$pagamento-dinners-image: 'spritesheet-01.png';
+$pagamento-dinners: (226px, 80px, -226px, -80px, 29px, 23px, 320px, 216px, 'spritesheet-01.png', 'pagamento-dinners', );
+$pagamento-discover-name: 'pagamento-discover';
+$pagamento-discover-x: 271px;
+$pagamento-discover-y: 113px;
+$pagamento-discover-offset-x: -271px;
+$pagamento-discover-offset-y: -113px;
+$pagamento-discover-width: 38px;
+$pagamento-discover-height: 8px;
+$pagamento-discover-total-width: 320px;
+$pagamento-discover-total-height: 216px;
+$pagamento-discover-image: 'spritesheet-01.png';
+$pagamento-discover: (271px, 113px, -271px, -113px, 38px, 8px, 320px, 216px, 'spritesheet-01.png', 'pagamento-discover', );
+$pagamento-elo-name: 'pagamento-elo';
+$pagamento-elo-x: 226px;
+$pagamento-elo-y: 136px;
+$pagamento-elo-offset-x: -226px;
+$pagamento-elo-offset-y: -136px;
+$pagamento-elo-width: 29px;
+$pagamento-elo-height: 16px;
+$pagamento-elo-total-width: 320px;
+$pagamento-elo-total-height: 216px;
+$pagamento-elo-image: 'spritesheet-01.png';
+$pagamento-elo: (226px, 136px, -226px, -136px, 29px, 16px, 320px, 216px, 'spritesheet-01.png', 'pagamento-elo', );
+$pagamento-hiper-card-name: 'pagamento-hiperCard';
+$pagamento-hiper-card-x: 267px;
+$pagamento-hiper-card-y: 44px;
+$pagamento-hiper-card-offset-x: -267px;
+$pagamento-hiper-card-offset-y: -44px;
+$pagamento-hiper-card-width: 40px;
+$pagamento-hiper-card-height: 19px;
+$pagamento-hiper-card-total-width: 320px;
+$pagamento-hiper-card-total-height: 216px;
+$pagamento-hiper-card-image: 'spritesheet-01.png';
+$pagamento-hiper-card: (267px, 44px, -267px, -44px, 40px, 19px, 320px, 216px, 'spritesheet-01.png', 'pagamento-hiperCard', );
+$pagamento-master-card-name: 'pagamento-masterCard';
+$pagamento-master-card-x: 226px;
+$pagamento-master-card-y: 44px;
+$pagamento-master-card-offset-x: -226px;
+$pagamento-master-card-offset-y: -44px;
+$pagamento-master-card-width: 31px;
+$pagamento-master-card-height: 26px;
+$pagamento-master-card-total-width: 320px;
+$pagamento-master-card-total-height: 216px;
+$pagamento-master-card-image: 'spritesheet-01.png';
+$pagamento-master-card: (226px, 44px, -226px, -44px, 31px, 26px, 320px, 216px, 'spritesheet-01.png', 'pagamento-masterCard', );
+$pagamento-visa-name: 'pagamento-visa';
+$pagamento-visa-x: 226px;
+$pagamento-visa-y: 113px;
+$pagamento-visa-offset-x: -226px;
+$pagamento-visa-offset-y: -113px;
+$pagamento-visa-width: 35px;
+$pagamento-visa-height: 13px;
+$pagamento-visa-total-width: 320px;
+$pagamento-visa-total-height: 216px;
+$pagamento-visa-image: 'spritesheet-01.png';
+$pagamento-visa: (226px, 113px, -226px, -113px, 35px, 13px, 320px, 216px, 'spritesheet-01.png', 'pagamento-visa', );
+$spritesheet-width: 320px;
+$spritesheet-height: 216px;
+$spritesheet-image: 'spritesheet-01.png';
+$spritesheet-sprites: ($logo-ebit, $logo-google, $logo-n1, $logo-site-blindado, $logo-vtex, $pagamento-american-express, $pagamento-boleto, $pagamento-dinners, $pagamento-discover, $pagamento-elo, $pagamento-hiper-card, $pagamento-master-card, $pagamento-visa, );
+$spritesheet: (320px, 216px, 'spritesheet-01.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
