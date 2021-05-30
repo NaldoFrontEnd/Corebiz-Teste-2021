@@ -9,15 +9,17 @@ export default class Common {
     DOMReady() {
         $(document).ready(() => {
             this.sliderHome()
-            this.carousellHome()
             this.newsletter()
             this.prateleiraDinamica()
+            this.byButton()
         });
     }
-
+    
     onLoad() {
         $(window).on('load', () => {
-
+            setTimeout(()=> {
+                this.carousellHome()
+            }, 1000)
         });
     }
     
@@ -133,11 +135,56 @@ export default class Common {
         $.ajax(settings).done(function (response) {
             console.log(response);
 
-            response.forEach(element => {
-                console.log(element.productName)
+            response.forEach((element,index) => {
+
+                let produto = `
+                
+                <li class="listProdutos__item">
+                <a href="#" class="listProdutos__item--link">
+                  <div class="listProdutos__item--flag">
+                    <span class="off">Off</span>
+                  </div>
+                  <img class="listProdutos__item--image" src="${element.imageUrl}" alt="produto">
+                  
+                  <div class="listProdutos__item--wrapper">
+                    <span class="listProdutos__item--name">${element.productName}</span>
+    
+                    <ul class="listProdutos__item--avaliacoes">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+    
+                    <span class="listProdutos__item--precoDe">de R$ 299,00</span>
+                    <span class="listProdutos__item--precoPor">por R$ 199,00</span>  
+                    <span class="listProdutos__item--parcelado">ou em 4x de R$ 49,75</span>   
+                    <span class="listProdutos__item--btnComprar" title="Comprar">Comprar</span> 
+                  </div>
+                </a>
+              </li>
+                
+                `
+            
+                $('.listProdutos').append(produto);
+
             });
         });
-    }                    
+
+    } 
+    
+    byButton() {
+        $(document).on('click', '.listProdutos__item--btnComprar', () => {
+            let num = Number($('.circle span').text())
+            num += 1;
+            
+            localStorage.setItem('miniCart', num)
+            $('.circle span').text(localStorage.getItem('miniCart'))
+        })
+
+        $('.circle span').text(localStorage.getItem('miniCart'))
+    }
 
     init() {
         this.DOMReady();

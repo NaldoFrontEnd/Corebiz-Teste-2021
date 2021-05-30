@@ -114,6 +114,9 @@ Header
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: relative;
+                left: -5px;
+                top: -5px;
             }
         }
     }
