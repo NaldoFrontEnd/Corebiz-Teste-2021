@@ -86,18 +86,18 @@
         height: auto;
       }
       
-
-      @include bkp('mobile'){
-        .desk{
+      #wrapper{
+        @include bkp('mobile'){
+          .desk{
+            display: none;
+          }
+        }
+        @include bkp('desktop'){
+          .mob{
           display: none;
+          }
         }
       }
-      @include bkp('desktop'){
-        .mob{
-        display: none;
-        }
-      }
-      
       
       body{
         font-family: $font-nunito;

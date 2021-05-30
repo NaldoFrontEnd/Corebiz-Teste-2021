@@ -23,6 +23,30 @@ Footer
         margin-bottom: 15px;
     }
 
+    .sucesso{
+        display: none;
+        text-align: center;
+
+        p{
+            color: #333;
+            strong{
+                @include rem('font-size', 14px);
+                color: $black;
+            }
+        }
+
+        button{
+            width: 328px;
+            height: 48px;
+            border-radius: 5px;
+            color: $white;
+            @include rem('font-size', 14px);
+            background-color: $black;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    }
+
     button,
     input{
         border-radius: 5px;
@@ -35,28 +59,47 @@ Footer
     }
 
     form{
+        display: flex;
+
         @include bkp('mobile'){
             width: 100%;
-            display: flex;
             flex-direction: column;
         }
 
-        input{
-            height: 48px;
-            background-color: $white;
-            color: #585858;
-            padding: 15px;
-
+        div{
             @include bkp('mobile'){
+                width: 100%;
                 &:nth-child(2){
                     margin: 20px 0 10px 0;
                 }
             }
-            
-            @include bkp('desktop'){
-                width: 280px;
+
+            input{
+                width: 100%;
+                height: 48px;
+                background-color: $white;
+                color: #585858;
+                padding: 15px;
+
+                @include bkp('desktop'){
+                    width: 280px;
+                }
+
+                &.erro{
+                    border: 1px solid #D7182A;
+                }
+            }
+
+            span{
+                color: #D7182A;
+                display: none;
+                margin: 5px 0 0 5px;
+                &.erro{
+                    display: block;
+                }
             }
         }
+
         button{
             height: 48px;
             background-color: $black;

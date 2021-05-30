@@ -57,12 +57,13 @@ Footer
             margin-right: 17px;
         }
         a{
-            width: max-content;
+            width: 198px;
+            height: 38px;
             background-color: $white;
             color: $black;
             display: flex; 
             border-radius: 5px;
-            padding: 10px;
+            padding: 10px 20px;
             align-items: center;
 
             &:first-child{
@@ -70,8 +71,9 @@ Footer
             }
 
             &:last-child{
+                padding: 5px 20px;
                 span{
-                    line-height: 16px;
+                    line-height: 13px;
                 }
             }
         }
