@@ -8,9 +8,10 @@ export default class Common {
 
     DOMReady() {
         $(document).ready(() => {
-            this.newsletter()
             this.sliderHome()
-            this.produtosHome()
+            this.carousellHome()
+            this.newsletter()
+            this.prateleiraDinamica()
         });
     }
 
@@ -25,8 +26,44 @@ export default class Common {
 
         });
     }
+
+     sliderHome() {
+        $('.c-sliderHome__sliders').owlCarousel({
+            items: 1,
+            margin: 0,
+            lazyLoad: true,
+            nav: false,
+            loop: true,
+            touchDrag: true,
+            autoplayHoverPause: true,
+            mouseDrag: true,
+            rewind: true,
+            autoplay: 3000
+        });
+    }
+
+    carousellHome() {
+        $('.listProdutos').owlCarousel({
+            loop: true,
+            touchDrag: true,
+            mouseDrag: true,
+            margin: 10,
+            nav: true,
+            autoplay: 3000,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items: 2,
+                    nav: false,
+                },
+                1366:{
+                    items: 4,
+                }
+            }
+        });
+    }
         
-    newsletter(){
+    newsletter() {
         $(document).on('click', '.c-news button', function(event){
             event.preventDefault();
 
@@ -84,43 +121,23 @@ export default class Common {
         $(document).on('click', '.sucesso button', function(){
             location.reload();
       });
-    }                          
-    
-    sliderHome() {
-        $('.c-sliderHome__sliders').owlCarousel({
-            items: 1,
-            margin: 0,
-            lazyLoad: true,
-            nav: false,
-            loop: true,
-            touchDrag: true,
-            autoplayHoverPause: true,
-            mouseDrag: true,
-            rewind: true,
-            autoplay: 3000
-        });
-    }
+    }      
 
-    produtosHome() {
-        $('.listProdutos').owlCarousel({
-            loop: true,
-            touchDrag: true,
-            mouseDrag: true,
-            margin: 10,
-            nav: true,
-            autoplay: 3000,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items: 2,
-                    nav: false,
-                },
-                1366:{
-                    items: 4,
-                }
-            }
+    prateleiraDinamica() {
+        let settings = {
+        "url": "https://corebiz-test.herokuapp.com/api/v1/products",
+        "method": "GET",
+        "timeout": 0,
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+
+            response.forEach(element => {
+                console.log(element.productName)
+            });
         });
-    }
+    }                    
 
     init() {
         this.DOMReady();
