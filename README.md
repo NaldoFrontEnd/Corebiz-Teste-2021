@@ -10,7 +10,6 @@ VtexSpeed com Gulp
 ## Install
 
 Clone o repositório do projeto.
-Mudar as informações no package.json
 
 ## Quick Start
 
@@ -18,7 +17,3 @@ Mudar as informações no package.json
     npm install
     gulp
 ```
-
-## Editando a loja
-
-No arquivo `package.json`, edite os campos `accountName` e `filePrefix` para ajustar o vtexlocal e o prefixo dos arquivos gerados.
